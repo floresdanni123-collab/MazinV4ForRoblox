@@ -15,7 +15,7 @@ end
 local function downloadFile(path, func)
 	if not isfile(path) then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/'..select(1, path:gsub('newmazin/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/floresdanni123-collab/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/'..select(1, path:gsub('newmazin/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -34,7 +34,7 @@ if isfile('newmazin/games/'..mazin.Place..'.lua') then
 else
 	if not shared.MazinDeveloper then
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/games/'..mazin.Place..'.lua', true)
+			return game:HttpGet('https://raw.githubusercontent.com/floresdanni123-collab/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/games/'..mazin.Place..'.lua', true)
 		end)
 		if suc and res ~= '404: Not Found' then
 			loadstring(downloadFile('newmazin/games/'..mazin.Place..'.lua'), 'skywars')()

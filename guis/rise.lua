@@ -221,7 +221,7 @@ local function downloadFile(path, func)
 	if not isfile(path) then
 		createDownloader(path)
 		local suc, res = pcall(function()
-			return game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/'..select(1, path:gsub('newmazin/', '')), true)
+			return game:HttpGet('https://raw.githubusercontent.com/floresdanni123-collab/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/'..select(1, path:gsub('newmazin/', '')), true)
 		end)
 		if not suc or res == '404: Not Found' then
 			error(res)
@@ -3727,7 +3727,7 @@ topbar:CreateDropdown({
 			if shared.MazinDeveloper then
 				loadstring(readfile('newmazin/loader.lua'), 'loader')()
 			else
-				loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/loader.lua', true))()
+				loadstring(game:HttpGet('https://raw.githubusercontent.com/floresdanni123-collab/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/loader.lua', true))()
 			end
 		end
 	end,
@@ -3765,7 +3765,7 @@ topbar:CreateButton({
 		if shared.MazinDeveloper then
 			loadstring(readfile('newmazin/loader.lua'), 'loader')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/loader.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/floresdanni123-collab/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/loader.lua', true))()
 		end
 	end,
 	Tooltip = 'This will set your profile to the default settings of Mazin'
@@ -3829,7 +3829,7 @@ topbar:CreateButton({
 		if shared.MazinDeveloper then
 			loadstring(readfile('newmazin/loader.lua'), 'loader')()
 		else
-			loadstring(game:HttpGet('https://raw.githubusercontent.com/7GrandDadPGN/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/loader.lua', true))()
+			loadstring(game:HttpGet('https://raw.githubusercontent.com/floresdanni123-collab/MazinV4ForRoblox/'..readfile('newmazin/profiles/commit.txt')..'/loader.lua', true))()
 		end
 	end,
 	Tooltip = 'Reloads mazin for debugging purposes'
